@@ -1,0 +1,381 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background-color: black;
+}
+.container{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+.container .betabox{
+    width: 70%;
+    display: flex;
+    padding-top:6px;
+    padding-bottom: 6px;
+    justify-content: center;
+}
+.container .betabox .logobox{
+    width: 30%;
+    display: flex;
+}
+.container .betabox .logobox img{
+    object-fit: contain;
+    height: 100px;
+    display: block;
+    margin-left: 5px;
+}
+.container .betabox .adsbox{
+    width: 80%;
+    float: left;
+}
+.container .betabox .adsbox img{
+    object-fit: cover;
+    width: 100%;
+    height: 100px;
+    display: block;
+    margin-left: 10px;
+}
+.menubox{
+    width: 100%;
+    background-color: white;
+}
+.menubox .menu{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.menubox .menu ul{
+    display: flex;
+}
+.menubox .menu ul li a{
+    display: block;
+    padding: 15px;
+    font-size: 21px;
+    font-family: 'Anton', sans-serif;
+}
+.menubox .menu ul li a:hover{
+    background-color: red;
+    margin-top: 2px;
+    display: block;
+    color: black;
+    cursor: pointer;
+    font-family: 'Dancing Script', cursive;
+}
+.itembox{
+    width: 80%;
+    height: 600px;
+    margin: auto;
+    margin-top: 10px;
+    flex-wrap:wrap ;
+    display: flex;
+    justify-content: space-between;
+}
+.itembox .minibox1{
+    width: 74.5%;
+    height: 50%;
+    background-color: purple;
+    display: flex;
+    flex-wrap:wrap ;
+    position: relative;
+}
+.itembox .minibox1 .inner1 .title, .itembox .minibox1 .inner2 .title{
+    position: absolute;
+    padding: 10px;
+    top: 5%;
+    left: 3%;
+    background-color: white;
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 100%, 75% 0);
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 100%, 75% 0);
+
+}
+.itembox .minibox1 .inner1 .title p, .itembox .minibox1 .inner2 .title p{
+    font-size: 20px;
+    font-family: 'Anton', sans-serif;
+    font-weight: 450;
+    padding-right: 25px;
+}
+
+.itembox .minibox1 .inner1{
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.itembox .minibox1 .inner2{
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.itembox .minibox1 .inner1 img, .itembox .minibox1 .inner2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.itembox .minibox1 .inner1::before , .itembox .minibox1 .inner2::before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: rgba(218, 165, 32, 0.17);
+    transition: 0.3s;
+    display: flex;
+}
+.itembox .minibox1 .inner1:hover::before{
+    cursor: pointer;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.97) , rgba(15, 13, 13, 0));
+    content: "New Season Release!"; 
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    text-shadow: 1.5px 2px 2px black;
+    text-decoration: solid;
+    color: cyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.itembox .minibox1 .inner2:hover::before{
+    cursor: pointer;
+    background-image: linear-gradient(to top, rgb(128, 128, 128) , rgba(255, 166, 0, 0.233));
+    content: "Best Series!"; 
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    text-shadow: 1.5px 2px 2px black;
+    text-decoration: solid;
+    color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.itembox .minibox2{
+    width: 25%;
+    height: 49.5%;
+    background-color: pink;
+    position: relative;
+    content: "";
+    transition: 0.1s;
+}
+.itembox .minibox2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.itembox .minibox2::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+.itembox .minibox2:hover::before{
+    cursor: pointer;
+    content: " Learn about'Anya'"; 
+    font-size: 25px;
+    font-family: 'Anton', sans-serif;
+    text-shadow: 2px 2px 2px black;
+    text-decoration: solid;
+    color: hotpink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 50%; */
+}
+.itembox .minibox2:hover::before{
+    background-image: url("aaya.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+}
+.itembox .minibox3{
+    width: 25%;
+    height: 49%;
+    background-color: pink;
+    position: relative;
+}
+.itembox .minibox3 iframe{
+    width: 100%;
+    object-fit: cover;
+}
+.itembox .minibox1 .inner1 .datebox , .itembox .minibox1 .inner2 .datebox{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 10px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.545));
+}
+.itembox .minibox1 .inner1 .datebox p, .itembox .minibox1 .inner2 .datebox p{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(255, 166, 0, 0.832);
+    text-shadow: 1.5px 2px 2px black;
+}
+.itembox .minibox1 .inner1 .text , .itembox .minibox1 .inner2 .text{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.itembox .minibox1 .inner1:hover .text , .itembox .minibox1 .inner2:hover .text{
+    position: absolute;
+    bottom: 18%;
+}
+.itembox .minibox1 .inner1 .text h1, .itembox .minibox1 .inner2 .text h1{
+    font-size: 25px;
+    color: blue;
+    text-shadow: 1.5px 2px 2px black;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+}
+.itembox .minibox1 .inner1 .text p, .itembox .minibox1 .inner2 .text p{
+    visibility: hidden;
+}
+.itembox  .minibox1 :hover.inner1 .text p, .itembox  .minibox1 :hover.inner2 .text p{
+    visibility: visible;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+    font-size: 14px;
+    color: whitesmoke;
+    text-shadow: 1.5px 2px 2px black;
+    transition: 0.3s;
+}
+.itembox .minibox1 .inner1:hover .text h1 ,.itembox .minibox1 .inner2:hover .text h1{
+    color: red;
+    transition: 0.3s;
+}
+.product{
+    width: 80%;
+    height: 400px;
+    background-color: black;
+    margin: auto;
+    margin-top:15px;
+    margin-bottom: 5px;
+    object-fit: contain;
+    position: relative;
+}
+.product .title{
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    display: flex;
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 100%, 75% 0);
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 100%, 75% 0);
+}
+.product .title h1{
+    font-size: 20px;
+    width: 120px;
+    font-family: 'Anton', sans-serif;
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 100%, 75% 0);
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 100%, 75% 0);
+    border-bottom: solid red;
+}
+.product .img-yaiba img{
+    width: 50%;
+    height: 345px;
+    content: " Coming Soon!! "; 
+    color: black;
+    font-size: 30px;
+    float: left;
+    object-fit: cover;
+}
+.product .img-yaiba:hover::before{
+    cursor: pointer;
+    content: " We'll see more about ' Tanjiro '"; 
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    text-shadow: 2px 2px 2px black;
+    text-decoration: solid;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product .img-yaiba:hover::before{
+    background-image: url("yaiba1.jpeg");
+    background-size: contain;
+    width: 100%;
+    height: 345px;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+}
+.product .img-yaiba::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+.rvcp{
+    width: 80%;
+    height: 400px;
+    background-color: black;
+    margin: auto;
+    margin-top:15px;
+    margin-bottom: 5px;
+    object-fit: contain;
+    position: relative;
+}
+.rvcp .title{
+    width: 100%;
+    padding: 10px;
+    background-color: hotpink;
+    display: flex;
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 100%, 75% 0);
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 100%, 75% 0);
+}
+.rvcp .title h1{
+    font-size: 20px;
+    width: 120px;
+    font-family: 'Anton', sans-serif;
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 100%, 75% 0);
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 100%, 75% 0);
+    border-bottom: solid red;
+}
+.rvcp .img-rv img{
+    width: 50%;
+    height: 345px;
+    content: " Coming Soon!! "; 
+    color: black;
+    font-size: 30px;
+    float: left;
+    object-fit: cover;
+}
+.rvcp .img-rv:hover::before{
+    cursor: pointer;
+    content: "Founder of RV Web <33"; 
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    text-shadow: 2px 2px 2px black;
+    text-decoration: solid;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rvcp .img-rv:hover::before{
+    background-image: url("Mylove.jpg");
+    background-size: contain;
+    width: 100%;
+    height: 345px;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+}
+.rvcp .img-rv::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
